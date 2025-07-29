@@ -8,7 +8,7 @@ A smart automation tool that builds and runs your static website inside Docker w
 
 ```
 your-project-folder/
-├── index.html          # Your main HTML file
+├── index.html          # Your project file
 ├── Dockerfile          # Lightweight Nginx-based setup
 └── run.sh              # ⚙️ The automation script
 ```
