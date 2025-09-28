@@ -16,7 +16,7 @@ your-project-folder/
 ---
 
 ## 🎯 Features
-
+ 
 - 🧠 Auto-detects project name from the folder (and converts to lowercase)
 - 🛠️ Builds Docker image and runs container on your chosen port
 - ♻️ Removes existing containers to prevent conflicts
