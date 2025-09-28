@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sanjay M - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Typed.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -31,50 +33,44 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 5px;
-            color: #ffffff; /* Bright white for contrast */
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Subtle shadow for readability */
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
             animation: fadeInText 2s ease-in-out;
         }
-        
         header p {
-            font-size: 18px;
-            color: rgba(255, 255, 255, 0.9); /* Bright white with slight transparency */
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Add depth to the text */
+            font-size: 22px;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
             font-weight: 500;
             letter-spacing: 1px;
             margin-top: 10px;
-            animation: fadeInText 2s 1s ease-in-out;
+            min-height: 30px; /* Keep space for dynamic text */
         }
-        
+        .links {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+        }
         .links a {
             text-decoration: none;
             font-size: 20px;
-            color: #ffffff; /* Bright white */
-            background-color: rgba(0, 0, 0, 0.5); /* Slightly darker transparent background */
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 12px 24px;
             border-radius: 50px;
-            border: 2px solid rgba(255, 255, 255, 0.8); /* Semi-transparent border */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             transition: all 0.3s ease-in-out;
         }
-        
         .links a:hover {
-            background-color: rgba(255, 255, 255, 0.9); /* Brighten on hover */
-            color: #333; /* Dark text on hover */
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
             transform: translateY(-5px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
         }
-      
-        
         @keyframes fadeInText {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -82,7 +78,7 @@
 
 <header>
     <h1>Sanjay M</h1>
-    <p>Welcome to my personal website</p>
+    <p><span id="typed"></span></p>
 </header>
 
 <div class="container">
@@ -93,6 +89,19 @@
         <a href="https://www.instagram.com/sanjay__panda__/" target="_blank">Instagram</a>
     </div>
 </div>
+
+<script>
+    // Initialize Typed.js
+    const typed = new Typed('#typed', {
+        strings: ["Web Developer", "AI Enthusiast", "Pixel Artist", "Tech Explorer"],
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 1500,
+        loop: true,
+        showCursor: true,
+        cursorChar: '|'
+    });
+</script>
 
 </body>
 </html>
